@@ -1,0 +1,14 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: gateway-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://node2:8761/eureka/,http://node1:8761/eureka/
+    healthcheck: #\u5F00\u542F\u5065\u5EB7\u68C0\u67E5\uFF08\u9700\u8981spring-boot-starter-actuator\u4F9D\u8D56\uFF09
+      enabled: true
+  instance:
+    lease-renewal-interval-in-seconds: 10 #\u79DF\u671F\u66F4\u65B0\u65F6\u95F4\u95F4\u9694\uFF08\u9ED8\u8BA430\u79D2\uFF09
+    lease-expiration-duration-in-seconds: 30 #\u79DF\u671F\u5230\u671F\u65F6\u95F4\uFF08\u9ED8\u8BA490\u79D2\uFF09
