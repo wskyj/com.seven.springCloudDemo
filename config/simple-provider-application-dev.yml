@@ -1,3 +1,4 @@
+profile: dev-1.0
 server:
   port: 8092
 spring:
