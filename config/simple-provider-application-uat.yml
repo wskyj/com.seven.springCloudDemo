@@ -21,10 +21,3 @@ eureka:
     instance:
       lease-renewal-interval-in-seconds: 10 #租期更新时间间隔（默认30秒）
       lease-expiration-duration-in-seconds: 30 #租期到期时间（默认90秒）
-info:
-  app:
-    name: @project.artifactId@
-    encoding: @project.build.sourceEncoding@
-    java:
-      source: @java.version@
-      target: @java.version@
