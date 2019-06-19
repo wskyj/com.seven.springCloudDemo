@@ -3,7 +3,6 @@ spring:
     name: simple-provider-application
   cloud:
     config:
-      uri: http://localhost:8080/
       profile: dev
       label: master
       discovery:

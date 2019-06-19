@@ -1,9 +1,8 @@
 spring:
   application:
-    name: simple-consumer-movie
+    name: simple-consumer-application
   cloud:
     config:
-      uri: http://localhost:8080/
       profile: dev
       label: master
       discovery:
