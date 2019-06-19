@@ -3,9 +3,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://node2:3306/microservice_user
-    username:
-    password:
+    url: jdbc:mysql://node4:3306/microservice_user
+    username: keyj
+    password: seven
     type: com.alibaba.druid.pool.DruidDataSource
   application:
     name: simple-provider-user
@@ -15,7 +15,7 @@ debug: true
 eureka:
   client:
     service-url:
-      defaultZone: http://node2:8761/eureka/,http://node1:8761/eureka/
+      defaultZone: http://node1:8761/eureka/,http://node4:8761/eureka/,http://node5:8761/eureka/
     healthcheck: #开启健康检查（需要spring-boot-starter-actuator依赖）
           enabled: true
     instance:

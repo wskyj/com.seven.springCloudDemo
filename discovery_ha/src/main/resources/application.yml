@@ -14,10 +14,10 @@ eureka:
     hostname: node1
   client:
     service-url:
-      defaultZone: http://node2:8761/eureka/
+      defaultZone: http://node4:8761/eureka/,http://node5:8761/eureka/
 ---
 spring:
-  profiles: peer2
+  profiles: peer4
 server:
   port: 8761
 eureka:
@@ -25,7 +25,21 @@ eureka:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 4000
   instance:
-    hostname: node2
+    hostname: node4
   client:
     service-url:
-      defaultZone: http://node1:8761/eureka/
+      defaultZone: http://node1:8761/eureka/,http://node5:8761/eureka/
+---
+spring:
+  profiles: peer5
+server:
+  port: 8761
+eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 4000
+  instance:
+    hostname: node5
+  client:
+    service-url:
+      defaultZone: http://node4:8761/eureka/,http://node1:8761/eureka/
