@@ -3,16 +3,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.6.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<groupId>com.seven</groupId>
+		<artifactId>springcloudemo</artifactId>
+		<version>0.0.1</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<groupId>com.seven</groupId>
-	<artifactId>simple-config-server</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>simple-config-server</name>
-	<description>simple-config-server</description>
+	<artifactId>simple-config-provider-user</artifactId>
+	<version>0.0.1</version>
+	<name>simple-config-provider-user</name>
+	<packaging>jar</packaging>
+	<description>Demo provider</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -21,10 +22,13 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-server</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -32,7 +36,9 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<artifactId>
+		spring-cloud-starter-config
+			</artifactId>
 		</dependency>
 	</dependencies>
 
@@ -56,5 +62,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>

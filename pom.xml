@@ -21,6 +21,7 @@
 	<modules>
 		<module>simple-consumer-movie</module>
 		<module>simple-provider-user</module>
+		<module>simple-config-provider-user</module>
 	</modules>
 	<dependencies>
 		<dependency>
